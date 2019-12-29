@@ -41,7 +41,7 @@ const useStyles = makeStyles(theme => ({
 
     // Position fixed tip: https://stackoverflow.com/a/4069794
     position: 'fixed',
-    top: 64,
+    top: theme.spacing(8),
     bottom: 64,
     width: '100vw',
     justifyContent: 'center',
@@ -49,7 +49,6 @@ const useStyles = makeStyles(theme => ({
   }
 }))
 
-// function App() {
 const App = props => {
   const classes = useStyles(props)
 
