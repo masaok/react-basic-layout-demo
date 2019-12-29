@@ -60,11 +60,9 @@ const App = props => {
               </header>
             </div>
 
-            {/* <div className={classes.fixedFooter}> */}
             <Switch>
               <Route component={Footer} />
             </Switch>
-            {/* </div> */}
           </div>
         </Router>
       </ThemeProvider>
