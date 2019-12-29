@@ -32,14 +32,17 @@ const useStyles = makeStyles(theme => ({
     minHeight: '100vh',
     backgroundColor: '#0087be'
   },
+
   content: {
     // backgroundColor: theme.palette.primary.dark,
     backgroundColor: '#282c34', // default overrides don't work here?
     display: 'flex',
     flexGrow: 1,
+
+    // Position fixed tip: https://stackoverflow.com/a/4069794
+    position: 'fixed',
     top: 64,
     bottom: 64,
-    position: 'fixed',
     width: '100vw',
     justifyContent: 'center',
     overflowX: 'hidden'
