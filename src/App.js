@@ -13,11 +13,13 @@ import Footer from './Footer'
 
 // const contentViewportHeight = theme => 'calc(100vh - 64px - 64px)'
 
-// Override the default MUI theme: https://material-ui.com/customization/default-theme/
+// Override the default MUI theme:
+// https://material-ui.com/customization/default-theme/
 const theme = createMuiTheme({
   palette: {
     primary: {
-      main: '#0087be' // dull blue
+      main: '#0087be', // dull blue
+      dark: '#282c34' // React default dark background
     }
   }
 })
@@ -27,29 +29,20 @@ const useStyles = makeStyles(theme => ({
     display: 'flex',
     flexDirection: 'column',
     flexGrow: 1,
-    minHeight: '100vh'
+    minHeight: '100vh',
+    backgroundColor: '#0087be'
   },
   content: {
-    backgroundColor: theme.palette.background.default,
+    // backgroundColor: theme.palette.primary.dark,
+    backgroundColor: '#282c34', // default overrides don't work here?
     display: 'flex',
+    flexGrow: 1,
     top: 64,
+    bottom: 64,
     position: 'fixed',
     width: '100vw',
-
-    // height: contentViewportHeight(theme),
     justifyContent: 'center',
-
-    overflowX: 'hidden',
-
-    '& > *': {
-      flexGrow: 1
-      // padding: theme.spacing(3)
-    },
-
-    '& > aside': {
-      flexGrow: 0,
-      padding: 0
-    }
+    overflowX: 'hidden'
   }
 }))
 

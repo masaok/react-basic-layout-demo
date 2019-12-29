@@ -8,6 +8,7 @@ const useStyles = makeStyles(theme => ({
   root: {
     color: theme.palette.common.white,
     backgroundColor: theme.palette.primary.main,
+    overflow: 'hidden',
     position: 'fixed',
     width: '100vw', // width of screen including margin: https://stackoverflow.com/a/25225716
     bottom: 0
