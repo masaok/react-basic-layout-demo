@@ -1,47 +1,47 @@
-import React from "react"
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom"
+import React from 'react'
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 
-import "./App.css"
+import './App.css' // using CSS directly, instead of JSS
 
-import { CssBaseline } from "@material-ui/core"
-import { ThemeProvider } from "@material-ui/styles"
-import { makeStyles, createMuiTheme } from "@material-ui/core/styles"
+import { CssBaseline } from '@material-ui/core'
+import { ThemeProvider } from '@material-ui/styles'
+import { makeStyles, createMuiTheme } from '@material-ui/core/styles'
 
-import Header from "./Header"
-import Home from "./Home"
-import Footer from "./Footer"
+import Header from './Header'
+import Home from './Home'
+import Footer from './Footer'
 
-const contentViewportHeight = theme => "calc(100vh - 56px - 56px)"
+const contentViewportHeight = theme => 'calc(100vh - 56px - 56px)'
 
 // Override the default MUI theme: https://material-ui.com/customization/default-theme/
 const theme = createMuiTheme({
   palette: {
     primary: {
-      main: "#0087be" // dull blue
+      main: '#0087be' // dull blue
     }
   }
 })
 
 const useStyles = makeStyles(theme => ({
   root: {
-    display: "flex",
-    flexDirection: "column",
+    display: 'flex',
+    flexDirection: 'column',
     flexGrow: 1,
-    minHeight: "100vh"
+    minHeight: '100vh'
   },
   content: {
     backgroundColor: theme.palette.background.default,
-    display: "flex",
+    display: 'flex',
     flexGrow: 1,
     height: contentViewportHeight(theme),
-    justifyContent: "center",
-    overflowX: "hidden",
-    "& > *": {
+    justifyContent: 'center',
+    overflowX: 'hidden',
+    '& > *': {
       flexGrow: 1,
       padding: theme.spacing(3)
     },
 
-    "& > aside": {
+    '& > aside': {
       flexGrow: 0,
       padding: 0
     }
