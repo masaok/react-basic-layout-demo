@@ -2,30 +2,21 @@ import React from "react"
 
 import { makeStyles } from "@material-ui/core/styles"
 
-import AppBar from "@material-ui/core/AppBar"
 import Toolbar from "@material-ui/core/Toolbar"
 
 const useStyles = makeStyles(theme => ({
   root: {
-    backgroundColor: theme.palette.common.white
+    color: theme.palette.common.white,
+    backgroundColor: theme.palette.primary.main
   },
-  appBar: {
-    top: "auto",
-    bottom: 0
-  }
+  footer: {}
 }))
 
 const Footer = props => {
   const classes = useStyles(props)
 
-  return (
-    // https://stackoverflow.com/questions/52653103/what-is-appbar-vs-toolbar
-    <AppBar position="fixed" color="primary" className={classes.appBar}>
-      <Toolbar>
-        <div>THIS IS THE FOOTER</div>
-      </Toolbar>
-    </AppBar>
-  )
+  // AppBar creates a "header" basic HTML tag, which doesn't make sense for the footer
+  return <Toolbar className={classes.root}>THIS IS THE FOOTER</Toolbar>
 }
 
 export default Footer

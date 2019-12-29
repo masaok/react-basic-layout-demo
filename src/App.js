@@ -1,7 +1,6 @@
 import React from "react"
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom"
 
-import logo from "./logo.svg"
 import "./App.css"
 
 import { CssBaseline } from "@material-ui/core"
@@ -9,7 +8,10 @@ import { ThemeProvider } from "@material-ui/styles"
 import { makeStyles, createMuiTheme } from "@material-ui/core/styles"
 
 import Header from "./Header"
+import Home from "./Home"
 import Footer from "./Footer"
+
+const contentViewportHeight = theme => "calc(100vh - 56px - 56px)"
 
 // Override the default MUI theme: https://material-ui.com/customization/default-theme/
 const theme = createMuiTheme({
@@ -26,6 +28,23 @@ const useStyles = makeStyles(theme => ({
     flexDirection: "column",
     flexGrow: 1,
     minHeight: "100vh"
+  },
+  content: {
+    backgroundColor: theme.palette.background.default,
+    display: "flex",
+    flexGrow: 1,
+    height: contentViewportHeight(theme),
+    justifyContent: "center",
+    overflowX: "hidden",
+    "& > *": {
+      flexGrow: 1,
+      padding: theme.spacing(3)
+    },
+
+    "& > aside": {
+      flexGrow: 0,
+      padding: 0
+    }
   }
 }))
 
@@ -43,22 +62,11 @@ const App = props => {
               <Route component={Header} />
             </Switch>
 
-            <div className="App">
-              <header className="App-header">
-                <img src={logo} className="App-logo" alt="logo" />
-                <p>
-                  Edit <code>src/App.js</code> and save to reload.
-                </p>
-                <a
-                  className="App-link"
-                  href="https://reactjs.org"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Learn React
-                </a>
-              </header>
-            </div>
+            <main className={classes.content}>
+              <Switch>
+                <Route component={Home} />
+              </Switch>
+            </main>
 
             <Switch>
               <Route component={Footer} />
