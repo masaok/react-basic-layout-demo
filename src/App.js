@@ -11,7 +11,7 @@ import Header from './Header'
 import Home from './Home'
 import Footer from './Footer'
 
-const contentViewportHeight = theme => 'calc(100vh - 56px - 56px)'
+// const contentViewportHeight = theme => 'calc(100vh - 64px - 64px)'
 
 // Override the default MUI theme: https://material-ui.com/customization/default-theme/
 const theme = createMuiTheme({
@@ -32,13 +32,18 @@ const useStyles = makeStyles(theme => ({
   content: {
     backgroundColor: theme.palette.background.default,
     display: 'flex',
-    flexGrow: 1,
-    height: contentViewportHeight(theme),
+    top: 64,
+    position: 'fixed',
+    width: '100vw',
+
+    // height: contentViewportHeight(theme),
     justifyContent: 'center',
+
     overflowX: 'hidden',
+
     '& > *': {
-      flexGrow: 1,
-      padding: theme.spacing(3)
+      flexGrow: 1
+      // padding: theme.spacing(3)
     },
 
     '& > aside': {

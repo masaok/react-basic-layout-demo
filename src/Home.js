@@ -2,30 +2,37 @@ import React from 'react'
 
 import { makeStyles } from '@material-ui/core/styles'
 
-import logo from './logo.svg'
+// import logo from './logo.svg'
 
 const useStyles = makeStyles(theme => ({
   root: {
     display: 'flex',
     flexDirection: 'column',
+    // flexGrow: 1,
     color: theme.palette.common.white,
     backgroundColor: '#282c34',
     textAlign: 'center',
-    fontSize: 12,
-    minHeight: '100vh',
-    alignItems: 'center',
-    justifyContent: 'center'
+    fontSize: 20,
+    // minHeight: '100vh',
+    height: 'calc(100vh - 64px)',
+    alignItems: 'center'
+    // justifyContent: 'center'
   },
   appBar: {
     top: 0
   }
 }))
 
+const rows = []
+for (var i = 0; i < 100; i++) {
+  rows.push(<div>test vertical scroll {i}</div>)
+}
+
 const Home = props => {
   const classes = useStyles(props)
   return (
     <div className={classes.root}>
-      <img src={logo} className="App-logo" alt="logo" />
+      {/* <img src={logo} className="App-logo" alt="logo" />
       <p>
         Edit <code>src/App.js</code> and save to reload.
       </p>
@@ -36,21 +43,8 @@ const Home = props => {
         rel="noopener noreferrer"
       >
         Learn React
-      </a>
-      <div>more stuff to test vertical scroll</div>
-      <div>more stuff to test vertical scroll</div>
-      <div>more stuff to test vertical scroll</div>
-      <div>more stuff to test vertical scroll</div>
-      <div>more stuff to test vertical scroll</div>
-      <div>more stuff to test vertical scroll</div>
-      <div>more stuff to test vertical scroll</div>
-      <div>more stuff to test vertical scroll</div>
-      <div>more stuff to test vertical scroll</div>
-      <div>more stuff to test vertical scroll</div>
-      <div>more stuff to test vertical scroll</div>
-      <div>more stuff to test vertical scroll</div>
-      <div>more stuff to test vertical scroll</div>
-      <div>more stuff to test vertical scroll</div>
+      </a> */}
+      {rows}
     </div>
   )
 }
