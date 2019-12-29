@@ -11,7 +11,14 @@ import { makeStyles, createMuiTheme } from "@material-ui/core/styles"
 import Header from "./Header"
 import Footer from "./Footer"
 
-const theme = createMuiTheme({})
+// Override the default MUI theme: https://material-ui.com/customization/default-theme/
+const theme = createMuiTheme({
+  palette: {
+    primary: {
+      main: "#0087be" // dull blue
+    }
+  }
+})
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -19,15 +26,6 @@ const useStyles = makeStyles(theme => ({
     flexDirection: "column",
     flexGrow: 1,
     minHeight: "100vh"
-  },
-
-  fixedFooter: {
-    position: "fixed",
-    bottom: 0,
-    width: "100%",
-    [theme.breakpoints.down("sm")]: {
-      display: "none"
-    }
   }
 }))
 
@@ -62,11 +60,11 @@ const App = props => {
               </header>
             </div>
 
-            <div className={classes.fixedFooter}>
-              <Switch>
-                <Route component={Footer} />
-              </Switch>
-            </div>
+            {/* <div className={classes.fixedFooter}> */}
+            <Switch>
+              <Route component={Footer} />
+            </Switch>
+            {/* </div> */}
           </div>
         </Router>
       </ThemeProvider>
