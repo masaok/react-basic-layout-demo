@@ -11,6 +11,8 @@ import Header from './Header'
 import Home from './Home'
 import Footer from './Footer'
 
+import PaperScrollDemo from './components/PaperScrollDemo'
+
 // const contentViewportHeight = theme => 'calc(100vh - 64px - 64px)'
 
 // Override the default MUI theme:
@@ -60,16 +62,19 @@ const App = props => {
           <div className={classes.root}>
             <Switch>
               <Route component={Header} />
+              <Route path="/paper-scroll-demo" component={Header} />
             </Switch>
 
             <main className={classes.content}>
               <Switch>
                 <Route component={Home} />
+                <Route path="/paper-scroll-demo" component={PaperScrollDemo} />
               </Switch>
             </main>
 
             <Switch>
               <Route component={Footer} />
+              <Route path="/paper-scroll-demo" component={Footer} />
             </Switch>
           </div>
         </Router>
