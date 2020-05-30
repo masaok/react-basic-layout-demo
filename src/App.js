@@ -7,13 +7,14 @@ import { CssBaseline } from '@material-ui/core'
 import { ThemeProvider } from '@material-ui/styles'
 import { makeStyles, createMuiTheme } from '@material-ui/core/styles'
 
+import { Helmet } from 'react-helmet'
+
 import Header from './Header'
 import Home from './Home'
 import Footer from './Footer'
 
 import PaperScrollDemo from './components/PaperScrollDemo'
-
-// const contentViewportHeight = theme => 'calc(100vh - 64px - 64px)'
+import PaperGridScrollDemo from './components/PaperGridScrollDemo'
 
 // Override the default MUI theme:
 // https://material-ui.com/customization/default-theme/
@@ -56,25 +57,30 @@ const App = (props) => {
 
   return (
     <React.Fragment>
+      <Helmet>
+        <title>React Basic Layout Demo</title>
+      </Helmet>
       <ThemeProvider theme={theme}>
         <CssBaseline />
         <Router>
           <div className={classes.root}>
             <Switch>
-              <Route exact path="/" component={Header} />
-              <Route path="/paper-scroll-demo" component={Header} />
+              <Route path="/" component={Header} />
             </Switch>
 
             <main className={classes.content}>
               <Switch>
                 <Route exact path="/" component={Home} />
                 <Route path="/paper-scroll-demo" component={PaperScrollDemo} />
+                <Route
+                  path="/paper-grid-scroll-demo"
+                  component={PaperGridScrollDemo}
+                />
               </Switch>
             </main>
 
             <Switch>
-              <Route exact path="/" component={Footer} />
-              <Route path="/paper-scroll-demo" component={Footer} />
+              <Route path="/" component={Footer} />
             </Switch>
           </div>
         </Router>

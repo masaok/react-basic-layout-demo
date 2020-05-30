@@ -3,6 +3,7 @@ import React from 'react'
 import { makeStyles } from '@material-ui/core/styles'
 
 import AppBar from '@material-ui/core/AppBar'
+import Button from '@material-ui/core/Button'
 import Link from '@material-ui/core/Link'
 import Toolbar from '@material-ui/core/Toolbar'
 
@@ -18,6 +19,9 @@ const useStyles = makeStyles((theme) => ({
   link: {
     marginLeft: theme.spacing(1),
     color: 'white'
+  },
+  button: {
+    marginLeft: theme.spacing(1)
   }
 }))
 
@@ -28,9 +32,20 @@ const Header = (props) => {
     <AppBar className={classes.appBar}>
       <Toolbar>
         <div>THIS IS THE HEADER</div>
-        <Link className={classes.link} href="/paper-scroll-demo">
+        <Button
+          className={classes.button}
+          variant="contained"
+          href="/paper-scroll-demo"
+        >
           Paper Scroll Demo
-        </Link>
+        </Button>
+        <Button
+          className={classes.button}
+          variant="contained"
+          href="/paper-grid-scroll-demo"
+        >
+          Paper Grid Scroll Demo
+        </Button>
       </Toolbar>
     </AppBar>
   )
