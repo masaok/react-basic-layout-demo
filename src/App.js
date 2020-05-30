@@ -26,7 +26,7 @@ const theme = createMuiTheme({
   }
 })
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   root: {
     display: 'flex',
     flexDirection: 'column',
@@ -51,7 +51,7 @@ const useStyles = makeStyles(theme => ({
   }
 }))
 
-const App = props => {
+const App = (props) => {
   const classes = useStyles(props)
 
   return (
@@ -61,19 +61,19 @@ const App = props => {
         <Router>
           <div className={classes.root}>
             <Switch>
-              <Route component={Header} />
+              <Route exact path="/" component={Header} />
               <Route path="/paper-scroll-demo" component={Header} />
             </Switch>
 
             <main className={classes.content}>
               <Switch>
-                <Route component={Home} />
+                <Route exact path="/" component={Home} />
                 <Route path="/paper-scroll-demo" component={PaperScrollDemo} />
               </Switch>
             </main>
 
             <Switch>
-              <Route component={Footer} />
+              <Route exact path="/" component={Footer} />
               <Route path="/paper-scroll-demo" component={Footer} />
             </Switch>
           </div>

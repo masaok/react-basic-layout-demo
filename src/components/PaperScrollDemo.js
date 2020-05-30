@@ -22,7 +22,7 @@ const useStyles = makeStyles((theme) => ({
 }))
 
 const rows = []
-for (var i = 1; i <= 100; i++) {
+for (var i = 1; i <= 10; i++) {
   rows.push(<div>test vertical scroll {i}</div>)
 }
 
@@ -30,6 +30,7 @@ const PaperScrollDemo = (props) => {
   const classes = useStyles(props)
   return (
     <div className={classes.root}>
+      TEST
       <Paper>{rows}</Paper>
     </div>
   )
