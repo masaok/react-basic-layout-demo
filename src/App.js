@@ -15,6 +15,7 @@ import Footer from './Footer'
 
 import PaperScrollDemo from './components/PaperScrollDemo'
 import PaperGridScrollDemo from './components/PaperGridScrollDemo'
+import PaperGridScrollBarDemo from './components/PaperGridScrollBarDemo'
 
 // Override the default MUI theme:
 // https://material-ui.com/customization/default-theme/
@@ -75,6 +76,10 @@ const App = (props) => {
                 <Route
                   path="/paper-grid-scroll-demo"
                   component={PaperGridScrollDemo}
+                />
+                <Route
+                  path="/paper-grid-scrollbar-demo"
+                  component={PaperGridScrollBarDemo}
                 />
               </Switch>
             </main>

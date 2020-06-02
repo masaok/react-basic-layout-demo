@@ -4,7 +4,6 @@ import { makeStyles } from '@material-ui/core/styles'
 
 import AppBar from '@material-ui/core/AppBar'
 import Button from '@material-ui/core/Button'
-import Link from '@material-ui/core/Link'
 import Toolbar from '@material-ui/core/Toolbar'
 
 const useStyles = makeStyles((theme) => ({
@@ -32,6 +31,9 @@ const Header = (props) => {
     <AppBar className={classes.appBar}>
       <Toolbar>
         <div>THIS IS THE HEADER</div>
+        <Button className={classes.button} variant="contained" href="/">
+          Home
+        </Button>
         <Button
           className={classes.button}
           variant="contained"
@@ -45,6 +47,13 @@ const Header = (props) => {
           href="/paper-grid-scroll-demo"
         >
           Paper Grid Scroll Demo
+        </Button>
+        <Button
+          className={classes.button}
+          variant="contained"
+          href="/paper-grid-scrollbar-demo"
+        >
+          Paper Grid Scrollbar Demo
         </Button>
       </Toolbar>
     </AppBar>

@@ -19,6 +19,12 @@ const useStyles = makeStyles((theme) => ({
   appBar: {
     top: 0
   },
+  container: {
+    width: theme.spacing(50),
+    // maxHeight: 300, // not necessary, as container will fill screen
+    margin: theme.spacing(1),
+    overflow: 'auto'
+  },
   paper: {
     margin: theme.spacing(1),
     padding: theme.spacing(1)
@@ -49,13 +55,15 @@ const PaperGridScrollDemo = (props) => {
   return (
     <div className={classes.root}>
       PAPER GRID SCROLL DEMO
-      <Paper className={classes.paper}>
-        <Grid container spacing={1}>
-          <Grid container item xs={12} spacing={3}>
-            <FormRow />
+      <div className={classes.container}>
+        <Paper className={classes.paper}>
+          <Grid container spacing={1}>
+            <Grid container item xs={12} spacing={3}>
+              <FormRow />
+            </Grid>
           </Grid>
-        </Grid>
-      </Paper>
+        </Paper>
+      </div>
     </div>
   )
 }
