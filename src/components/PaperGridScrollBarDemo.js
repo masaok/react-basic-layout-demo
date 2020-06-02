@@ -22,9 +22,6 @@ const useStyles = makeStyles((theme) => ({
   body: {
     display: 'flex',
     flexDirection: 'row',
-    // width: theme.spacing(50),
-    // maxHeight: 300, // not necessary, as container will fill screen
-    // margin: theme.spacing(1)
     overflow: 'auto'
   },
   leftBar: {
@@ -34,11 +31,6 @@ const useStyles = makeStyles((theme) => ({
   main: {
     flex: 2,
     overflow: 'auto'
-    // width: theme.spacing(5)
-  },
-  box: {
-    display: 'flex'
-    // minHeight: '-webkit-min-content'
   },
   rightBar: {
     flex: 1,
@@ -76,15 +68,13 @@ const PaperGridScrollDemo = (props) => {
       <div className={classes.body}>
         <div className={classes.leftBar}>LEFT</div>
         <div className={classes.main}>
-          <div className={classes.box}>
-            <Paper className={classes.paper}>
-              <Grid container spacing={1}>
-                <Grid container item xs={12} spacing={3}>
-                  <FormRow />
-                </Grid>
+          <Paper className={classes.paper}>
+            <Grid container spacing={1}>
+              <Grid container item xs={12} spacing={3}>
+                <FormRow />
               </Grid>
-            </Paper>
-          </div>
+            </Grid>
+          </Paper>
         </div>
         <div className={classes.rightBar}>RIGHT</div>
       </div>
