@@ -6,7 +6,7 @@ import Paper from '@material-ui/core/Paper'
 
 // import logo from './logo.svg'
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(theme => ({
   root: {
     display: 'flex',
     flexDirection: 'column',
@@ -14,32 +14,32 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: theme.palette.primary.dark,
     textAlign: 'center',
     fontSize: 20,
-    alignItems: 'center'
+    alignItems: 'center',
   },
   appBar: {
-    top: 0
+    top: 0,
   },
   body: {
     display: 'flex',
     flexDirection: 'row',
-    overflow: 'auto'
+    overflow: 'auto',
   },
   leftBar: {
     flex: 1,
-    backgroundColor: 'green'
+    backgroundColor: 'green',
   },
   main: {
     flex: 2,
-    overflow: 'auto'
+    overflow: 'auto',
   },
   rightBar: {
     flex: 1,
-    backgroundColor: 'purple'
+    backgroundColor: 'purple',
   },
   paper: {
     margin: theme.spacing(1),
-    padding: theme.spacing(1)
-  }
+    padding: theme.spacing(1),
+  },
 }))
 
 const rows = []
@@ -50,7 +50,7 @@ for (var i = 1; i <= 50; i++) {
 const FormRow = () => {
   const classes = useStyles()
   const rows = []
-  for (var i = 1; i <= 50; i++) {
+  for (var i = 1; i <= 60; i++) {
     rows.push(
       <Grid item xs={4}>
         <Paper className={classes.paper}>item {i}</Paper>
@@ -60,7 +60,7 @@ const FormRow = () => {
   return <React.Fragment>{rows}</React.Fragment>
 }
 
-const PaperGridScrollDemo = (props) => {
+const PaperGridScrollDemo = props => {
   const classes = useStyles(props)
 
   return (

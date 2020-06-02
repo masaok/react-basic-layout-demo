@@ -6,25 +6,26 @@ import AppBar from '@material-ui/core/AppBar'
 import Button from '@material-ui/core/Button'
 import Toolbar from '@material-ui/core/Toolbar'
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(theme => ({
   root: {
-    color: theme.palette.common.white
+    color: theme.palette.common.white,
   },
   appBar: {
+    backgroundColor: 'Maroon',
     overflow: 'hidden',
     position: 'fixed',
-    top: 0
+    top: 0,
   },
   link: {
     marginLeft: theme.spacing(1),
-    color: 'white'
+    color: 'white',
   },
   button: {
-    marginLeft: theme.spacing(1)
-  }
+    marginLeft: theme.spacing(1),
+  },
 }))
 
-const Header = (props) => {
+const Header = props => {
   const classes = useStyles(props)
   return (
     // https://stackoverflow.com/questions/52653103/what-is-appbar-vs-toolbar
@@ -34,25 +35,13 @@ const Header = (props) => {
         <Button className={classes.button} variant="contained" href="/">
           Home
         </Button>
-        <Button
-          className={classes.button}
-          variant="contained"
-          href="/paper-scroll-demo"
-        >
+        <Button className={classes.button} variant="contained" href="/paper-scroll-demo">
           Paper Scroll Demo
         </Button>
-        <Button
-          className={classes.button}
-          variant="contained"
-          href="/paper-grid-scroll-demo"
-        >
+        <Button className={classes.button} variant="contained" href="/paper-grid-scroll-demo">
           Paper Grid Scroll Demo
         </Button>
-        <Button
-          className={classes.button}
-          variant="contained"
-          href="/paper-grid-scrollbar-demo"
-        >
+        <Button className={classes.button} variant="contained" href="/paper-grid-scrollbar-demo">
           Paper Grid Scrollbar Demo
         </Button>
       </Toolbar>

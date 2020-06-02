@@ -13,11 +13,11 @@ const useStyles = makeStyles(theme => ({
     backgroundColor: theme.palette.primary.dark,
     textAlign: 'center',
     fontSize: 20,
-    alignItems: 'center'
+    alignItems: 'center',
   },
   appBar: {
-    top: 0
-  }
+    top: 0,
+  },
 }))
 
 const rows = []

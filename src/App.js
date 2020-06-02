@@ -24,18 +24,18 @@ const theme = createMuiTheme({
     primary: {
       // main: '#0087be', // dull blue
       main: '#555555', // dark gray
-      dark: '#282c34' // React default dark background
-    }
-  }
+      dark: '#282c34', // React default dark background
+    },
+  },
 })
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(theme => ({
   root: {
     display: 'flex',
     flexDirection: 'column',
     flexGrow: 1,
     minHeight: '100vh',
-    backgroundColor: '#0087be'
+    backgroundColor: '#0087be',
   },
 
   content: {
@@ -47,14 +47,14 @@ const useStyles = makeStyles((theme) => ({
     // Position fixed tip: https://stackoverflow.com/a/4069794
     position: 'fixed',
     top: theme.spacing(8),
-    bottom: 64,
+    bottom: theme.spacing(8),
     width: '100vw',
     justifyContent: 'center',
-    overflowX: 'hidden'
-  }
+    overflow: 'auto', // scroll if necessary on all scrolling demo pages
+  },
 }))
 
-const App = (props) => {
+const App = props => {
   const classes = useStyles(props)
 
   return (
@@ -74,14 +74,8 @@ const App = (props) => {
               <Switch>
                 <Route exact path="/" component={Home} />
                 <Route path="/paper-scroll-demo" component={PaperScrollDemo} />
-                <Route
-                  path="/paper-grid-scroll-demo"
-                  component={PaperGridScrollDemo}
-                />
-                <Route
-                  path="/paper-grid-scrollbar-demo"
-                  component={PaperGridScrollBarDemo}
-                />
+                <Route path="/paper-grid-scroll-demo" component={PaperGridScrollDemo} />
+                <Route path="/paper-grid-scrollbar-demo" component={PaperGridScrollBarDemo} />
               </Switch>
             </main>
 

@@ -4,19 +4,19 @@ import { makeStyles } from '@material-ui/core/styles'
 
 import Toolbar from '@material-ui/core/Toolbar'
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(theme => ({
   root: {
     color: theme.palette.common.white,
-    backgroundColor: theme.palette.primary.main,
+    backgroundColor: 'DarkOliveGreen',
     overflow: 'hidden',
     position: 'fixed',
     width: '100vw', // width of screen including margin: https://stackoverflow.com/a/25225716
-    bottom: 0
+    bottom: 0,
   },
-  footer: {}
+  footer: {},
 }))
 
-const Footer = (props) => {
+const Footer = props => {
   const classes = useStyles(props)
 
   // AppBar creates a "header" basic HTML tag, which doesn't make sense for the footer
