@@ -19,11 +19,30 @@ const useStyles = makeStyles((theme) => ({
   appBar: {
     top: 0
   },
-  container: {
-    width: theme.spacing(50),
+  body: {
+    display: 'flex',
+    flexDirection: 'row',
+    // width: theme.spacing(50),
     // maxHeight: 300, // not necessary, as container will fill screen
-    margin: theme.spacing(1),
+    // margin: theme.spacing(1)
     overflow: 'auto'
+  },
+  leftBar: {
+    flex: 1,
+    backgroundColor: 'green'
+  },
+  main: {
+    flex: 2,
+    overflow: 'auto'
+    // width: theme.spacing(5)
+  },
+  box: {
+    display: 'flex'
+    // minHeight: '-webkit-min-content'
+  },
+  rightBar: {
+    flex: 1,
+    backgroundColor: 'purple'
   },
   paper: {
     margin: theme.spacing(1),
@@ -54,15 +73,20 @@ const PaperGridScrollDemo = (props) => {
 
   return (
     <div className={classes.root}>
-      PAPER GRID SCROLL DEMO
-      <div className={classes.container}>
-        <Paper className={classes.paper}>
-          <Grid container spacing={1}>
-            <Grid container item xs={12} spacing={3}>
-              <FormRow />
-            </Grid>
-          </Grid>
-        </Paper>
+      <div className={classes.body}>
+        <div className={classes.leftBar}>LEFT</div>
+        <div className={classes.main}>
+          <div className={classes.box}>
+            <Paper className={classes.paper}>
+              <Grid container spacing={1}>
+                <Grid container item xs={12} spacing={3}>
+                  <FormRow />
+                </Grid>
+              </Grid>
+            </Paper>
+          </div>
+        </div>
+        <div className={classes.rightBar}>RIGHT</div>
       </div>
     </div>
   )
