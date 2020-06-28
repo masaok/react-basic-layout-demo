@@ -81,6 +81,18 @@ const StateVariableCopyDemo = props => {
   console.log('ORIGINAL CHANGED AFTER RFDC COPY? NO, SUCCESS!')
   console.log(complexObject)
 
+  const spreadOp = {
+    simpleString,
+    ...complexObject,
+  }
+
+  console.log('SPREAD OP:')
+  console.log(spreadOp)
+  spreadOp.newThing = 'SPREAD OP ADDITION'
+  spreadOp.moreStuff.evenMore.spreadOpNew = 'SPREAD OP ADDITION'
+  console.log('ORIGINAL CHANGED AFTER SPREAD OP COPY? YES, interesting')
+  console.log(complexObject)
+
   return <div className={classes.root}>STATE VARIABLE COPY DEMO</div>
 }
 
