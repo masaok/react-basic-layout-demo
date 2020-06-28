@@ -17,6 +17,8 @@ import PaperScrollDemo from './components/PaperScrollDemo'
 import PaperGridScrollDemo from './components/PaperGridScrollDemo'
 import PaperGridScrollBarDemo from './components/PaperGridScrollBarDemo'
 
+import StateVariableCopyDemo from './components/StateVariableCopyDemo'
+
 // Override the default MUI theme:
 // https://material-ui.com/customization/default-theme/
 const theme = createMuiTheme({
@@ -76,6 +78,7 @@ const App = props => {
                 <Route path="/paper-scroll-demo" component={PaperScrollDemo} />
                 <Route path="/paper-grid-scroll-demo" component={PaperGridScrollDemo} />
                 <Route path="/paper-grid-scrollbar-demo" component={PaperGridScrollBarDemo} />
+                <Route path="/state-variable-copy-demo" component={StateVariableCopyDemo} />
               </Switch>
             </main>
 
