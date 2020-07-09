@@ -61,7 +61,7 @@ const App = props => {
   const classes = useStyles(props)
 
   return (
-    <React.Fragment>
+    <>
       <Helmet>
         <title>React Basic Layout Demo</title>
       </Helmet>
@@ -89,7 +89,7 @@ const App = props => {
           </div>
         </Router>
       </ThemeProvider>
-    </React.Fragment>
+    </>
   )
 }
 
