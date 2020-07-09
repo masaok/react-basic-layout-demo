@@ -7,6 +7,8 @@ import { makeStyles } from '@material-ui/core/styles'
 import { boldStuffStyle } from './constants'
 import { italicStuffStyle, purpleStuffStyle } from './commonStyles'
 
+import { Helmet } from 'react-helmet'
+
 const useStyles = makeStyles(theme => ({
   root: {
     display: 'flex',
@@ -42,6 +44,9 @@ const Home = props => {
   const classes = useStyles(props)
   return (
     <div className={classes.root}>
+      {/* <Helmet>
+        <title>HOME</title>
+      </Helmet> */}
       <div className={classes.someStuff}>This stuff should be bold</div>
       <div className={classes.italicStuff}>This stuff should be italic</div>
       <div className={classes.purpleStuff}>This stuff should be purple</div>

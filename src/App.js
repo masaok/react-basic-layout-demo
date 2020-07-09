@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 
 import './App.css' // using CSS directly, instead of JSS
@@ -8,6 +8,8 @@ import { ThemeProvider } from '@material-ui/styles'
 import { makeStyles, createMuiTheme } from '@material-ui/core/styles'
 
 import { Helmet } from 'react-helmet'
+
+import Button from '@material-ui/core/Button'
 
 import Header from './Header'
 import Home from './Home'
@@ -60,10 +62,18 @@ const useStyles = makeStyles(theme => ({
 const App = props => {
   const classes = useStyles(props)
 
+  const [name, setName] = useState('MASAO')
+
+  console.log('HEYYYYY')
+
+  const doStuff = () => {
+    console.log('DOING STUFF')
+  }
+
   return (
     <>
       <Helmet>
-        <title>React Basic Layout Demo</title>
+        <title>React Basic Layout Demo - {name}</title>
       </Helmet>
       <ThemeProvider theme={theme}>
         <CssBaseline />

@@ -4,6 +4,7 @@ import { makeStyles } from '@material-ui/core/styles'
 import Paper from '@material-ui/core/Paper'
 
 // import logo from './logo.svg'
+import { Helmet } from 'react-helmet'
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -34,6 +35,9 @@ const PaperScrollDemo = props => {
   const classes = useStyles(props)
   return (
     <div className={classes.root}>
+      <Helmet>
+        <title>Paper Scroll Demo</title>
+      </Helmet>
       PAPER SCROLL DEMO
       <Paper className={classes.paper}>{rows}</Paper>
     </div>
