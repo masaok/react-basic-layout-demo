@@ -5,6 +5,7 @@ import { makeStyles } from '@material-ui/core/styles'
 // import logo from './logo.svg'
 
 import { boldStuffStyle } from './constants'
+import { italicStuffStyle, purpleStuffStyle } from './commonStyles'
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -23,6 +24,9 @@ const useStyles = makeStyles(theme => ({
   },
 
   someStuff: boldStuffStyle(theme),
+
+  ...italicStuffStyle(theme),
+  ...purpleStuffStyle(theme),
 }))
 
 const rows = []
@@ -35,6 +39,8 @@ const Home = props => {
   return (
     <div className={classes.root}>
       <div className={classes.someStuff}>This stuff should be bold</div>
+      <div className={classes.italicStuff}>This stuff should be italic</div>
+      <div className={classes.purpleStuff}>This stuff should be purple</div>
       {rows}
     </div>
   )
