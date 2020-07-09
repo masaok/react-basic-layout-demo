@@ -4,6 +4,8 @@ import { makeStyles } from '@material-ui/core/styles'
 
 // import logo from './logo.svg'
 
+import { boldStuffStyle } from './constants'
+
 const useStyles = makeStyles(theme => ({
   root: {
     display: 'flex',
@@ -15,9 +17,12 @@ const useStyles = makeStyles(theme => ({
     fontSize: 20,
     alignItems: 'center',
   },
+
   appBar: {
     top: 0,
   },
+
+  someStuff: boldStuffStyle(theme),
 }))
 
 const rows = []
@@ -27,7 +32,12 @@ for (var i = 1; i <= 100; i++) {
 
 const Home = props => {
   const classes = useStyles(props)
-  return <div className={classes.root}>{rows}</div>
+  return (
+    <div className={classes.root}>
+      <div className={classes.someStuff}>This stuff should be bold</div>
+      {rows}
+    </div>
+  )
 }
 
 export default Home
