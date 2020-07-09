@@ -27,6 +27,7 @@ const theme = createMuiTheme({
       // main: '#0087be', // dull blue
       main: '#555555', // dark gray
       dark: '#282c34', // React default dark background
+      red: '#FF0000', // React default dark background
     },
   },
 })

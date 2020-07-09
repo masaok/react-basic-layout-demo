@@ -27,6 +27,10 @@ const useStyles = makeStyles(theme => ({
 
   ...italicStuffStyle(theme),
   ...purpleStuffStyle(theme),
+
+  redStuff: {
+    color: theme.palette.primary.red,
+  },
 }))
 
 const rows = []
@@ -41,6 +45,7 @@ const Home = props => {
       <div className={classes.someStuff}>This stuff should be bold</div>
       <div className={classes.italicStuff}>This stuff should be italic</div>
       <div className={classes.purpleStuff}>This stuff should be purple</div>
+      <div className={classes.redStuff}>This stuff should be red</div>
       {rows}
     </div>
   )
