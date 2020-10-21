@@ -1,1 +1,1 @@
-![Image of Yaktocat](/screenshots/screenshot.PNG)
+![React Basic Layout Example](/screenshots/screenshot.PNG)
