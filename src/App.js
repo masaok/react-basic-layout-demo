@@ -9,7 +9,7 @@ import { makeStyles, createMuiTheme } from '@material-ui/core/styles'
 
 import { Helmet } from 'react-helmet'
 
-import Button from '@material-ui/core/Button'
+// import Button from '@material-ui/core/Button'
 
 import Header from './Header'
 import Home from './Home'
@@ -62,13 +62,13 @@ const useStyles = makeStyles(theme => ({
 const App = props => {
   const classes = useStyles(props)
 
-  const [name, setName] = useState('MASAO')
+  const [name] = useState('MASAO')
 
   console.log('HEYYYYY')
 
-  const doStuff = () => {
-    console.log('DOING STUFF')
-  }
+  // const doStuff = () => {
+  //   console.log('DOING STUFF')
+  // }
 
   return (
     <>

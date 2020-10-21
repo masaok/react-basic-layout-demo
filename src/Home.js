@@ -7,8 +7,6 @@ import { makeStyles } from '@material-ui/core/styles'
 import { boldStuffStyle } from './constants'
 import { italicStuffStyle, purpleStuffStyle } from './commonStyles'
 
-import { Helmet } from 'react-helmet'
-
 const useStyles = makeStyles(theme => ({
   root: {
     display: 'flex',
